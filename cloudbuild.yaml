@@ -38,8 +38,7 @@ steps:
   - name: google/cloud-sdk
     args: ['gcloud', 'run', 'deploy', 'simple-paython-app',
            '--image=us-central1-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY_REPO}/simple-python-app:${SHORT_SHA}',
-           '--region', 'us-central1', '--platform', 'managed', '--set-env-vars', 'NAME=CLOUD',
-           '--allow-authenticated']
+           '--region', 'us-central1', '--platform', 'managed', '--set-env-vars', 'NAME=CLOUD']
   # [END cloudbuild_python_deploy_yaml]
 
 # Store images in Google Artifact Registry
